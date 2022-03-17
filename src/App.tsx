@@ -20,8 +20,10 @@ const App:React.FC=()=> {
   return (
     <div className="App">
       <span className='heading'>TASKIFY</span>
-
       <InputFeild todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
+      {todos.map((v)=>{
+        <li>{v.todo}</li>
+      })}
     </div>
   );
 }
